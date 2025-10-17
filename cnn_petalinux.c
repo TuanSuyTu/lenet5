@@ -32,7 +32,6 @@ static inline float fxp_to_float(fxp x) { return (float)x / (1 << FRAC_BITS); }
 #define WEIGHTS_SIZE 5738
 #define NUM_TEST_IMAGES 10
 
-// ---- Ghi mảng 32-bit vào BRAM: NHÂN 4 (địa chỉ byte)
 static void load_weights_to_bram(const fxp *weights)
 {
     for (int i = 0; i < WEIGHTS_SIZE; i++)
