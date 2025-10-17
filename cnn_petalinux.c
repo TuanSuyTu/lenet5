@@ -56,7 +56,7 @@ static void start_cnn(void)
 }
 static void wait_cnn_done(void)
 {
-    // ap_done = bit1 (RO; clear-on-read hoặc khi ap_start hạ)
+
     while ((Xil_In32(CNN_CTRL_BASEADDR + CNN_CTRL_AP_CTRL) & 0x2u) == 0u)
     {
         // spin
